@@ -29,6 +29,8 @@
 	<meta name="description" content="<?php bloginfo('description'); ?>" />
 	<meta name="ComicPress" content="<?php global $comicpress_version; echo $comicpress_version; ?>" />
 	<?php if ( is_singular() && $comicpress_options['enable_comment_javascript'] ) wp_enqueue_script( 'comment-reply' ); ?>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js?ver=2.4.1"></script>
+	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/scripts/persistent_navi.js"></script>
 
 <!--[if lt IE 7]>
    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/ie6submenus.js"></script>
@@ -50,8 +52,8 @@
 
 </script>
 
-<!-- jquery/prototype conflic resolution -->
-<script ="text/javascript">
+<!-- jquery/prototype conflict resolution -->
+<script type="text/javascript">
 jQuery.noConflict();
 </script>
 </head>

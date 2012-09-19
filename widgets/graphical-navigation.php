@@ -41,9 +41,8 @@ class widget_comicpress_graphical_navigation extends WP_Widget {
 ?>
 
 <div id="comic_navi_wrapper">
-	<table class="comic_navi">
-	<tr>
-		<td class="comic_navi_left">
+	<div class="comic_navi">
+	<div class="comic_navi_left">
 			<?php if ($instance['first']) {
 				if (!empty($first_comic) && ($first_comic != $this_permalink)) { ?>
 					<a href="<?php echo $first_comic; ?>" class="navi navi-first" title="<?php echo $instance['first_title']; ?>"><?php echo $instance['first_title']; ?><span>First</span></a>
@@ -74,14 +73,14 @@ class widget_comicpress_graphical_navigation extends WP_Widget {
 				<?php } 
 			} 
 ?>
-		</td>
-		<td class="comic_navi_center">
+		</div>
+		<div class="comic_navi_center">
 		<?php
 			if ($instance['archives'] && !empty($instance['archive_path'])) { ?>
 				<a href="<?php echo $instance['archive_path']; ?>" class="navi navi-archives navi-archive" title="<?php echo $instance['archives_title']; ?>"><?php echo $instance['archives_title']; ?></a>
 			<?php } 
 			if ($instance['random']) { ?>
-				<a href="<?php echo bloginfo('url'); ?>/?randomcomic" class="navi navi-random" title="<?php echo $instance['random_title']; ?>"><?php echo $instance['random_title']; ?></a>
+				<a href="<?php echo bloginfo('url'); ?>/?randomcomic" class="navi navi-random" title="<?php echo $instance['random_title']; ?>"><?php echo $instance['random_title']; ?><span>Random</span></a>
 			<?php }
 			if ($instance['comictitle']) { ?>
 				<span class="navi-comictitle"><a href="<?php the_permalink(); ?>">"<?php the_title(); ?>"</a></span>
@@ -158,8 +157,8 @@ class widget_comicpress_graphical_navigation extends WP_Widget {
 			if ($instance['subscribe']) { ?>
 				<a href="<?php bloginfo('rss2_url') ?>" class="navi navi-subscribe" title="<?php echo $instance['subscribe_title']; ?>"><?php echo $instance['subscribe_title']; ?></a>
 			<?php } ?>
-		</td>
-		<td class="comic_navi_right">
+		</div>
+		<div class="comic_navi_right">
 			<?php
 			if ($instance['next']) {
 				if (!empty($next_comic)) { ?>
@@ -193,9 +192,8 @@ class widget_comicpress_graphical_navigation extends WP_Widget {
 					<div class="navi navi-last navi-void"><?php echo $instance['last_title']; ?><span>Last</span></div>
 				<?php }
 			} ?>
-		</td>
-	</tr>
-	</table>
+	</div>
+	</div>
 		<?php if ($instance['sharethis']) { ?>
 
 		<?php } ?>

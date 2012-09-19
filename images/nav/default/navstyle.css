@@ -4,24 +4,27 @@ Style: Default
 */
 
 #comic_navi_wrapper {
-	display: table;
-	border-collapse: collapse;
+	position: absolute;
+	top: 30px;
+	background: white;
+	width: 35px;
+	margin-left: -478px; /* half of content width + half of nav width */
+	left: 50%;
 	text-align: center;
-	margin: 0 auto;
 	font-weight: bold;
 	font-size: 12px;
+	padding: 10px;
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
 }
 
-.comic_navi_left {
-	float: left;
-}
-
-.comic_navi_right {
-	float: right;
-}
-
-.comic_navi {
-	padding: 2px;
+#comic_navi_wrapper.floatingNavi {
+  position: fixed;
+  visibility: hidden;
 }
 
 .navi-comictitle {
@@ -31,12 +34,12 @@ Style: Default
 }
 
 .navi {
-	padding: 0 6px;
-	display: inline-block;
+	display: block;
 	height: 35px;
 	width: 32px;
 	background-repeat: no-repeat;
 	text-indent:-9999px; 
+	margin: 0 auto;
 }
 
 .navi a {
@@ -45,8 +48,10 @@ Style: Default
 }
 
 .navi-first {
-	float: left;
 	background-image: url('http://www.herogirlcomics.com/wp-content/themes/herogirltheme v2/images/nav/default/first.png');
+}
+.navi-first.navi-void {
+	background-image: url('http://www.herogirlcomics.com/wp-content/themes/herogirltheme v2/images/nav/default/first_void.png');
 }
 
 .navi-prevchap, .navi-story_prev {
@@ -59,6 +64,9 @@ Style: Default
 
 .navi-prev, .navi-previous {
 	background-image: url('http://www.herogirlcomics.com/wp-content/themes/herogirltheme v2/images/nav/default/prev.png');
+}
+.navi-prev.navi-void, .navi-previous.navi-void {
+	background-image: url('http://www.herogirlcomics.com/wp-content/themes/herogirltheme v2/images/nav/default/prev_void.png');
 }
 
 .navi-comments, .navi-archive, .navi-random, .navi-buyprint {
@@ -91,19 +99,17 @@ Style: Default
 }
 	
 .navi-next {
-	float: left;
 	background-image: url('http://www.herogirlcomics.com/wp-content/themes/herogirltheme v2/images/nav/default/next.png');
 }
-
-.navi-nextchap, .navi-story_next {
-}
-
-.navi-story_next_in {
+.navi-next.navi-void {
+	background-image: url('http://www.herogirlcomics.com/wp-content/themes/herogirltheme v2/images/nav/default/next_void.png');
 }
 
 .navi-last {
-	float: right;
 	background-image: url('http://www.herogirlcomics.com/wp-content/themes/herogirltheme v2/images/nav/default/last.png');
+}
+.navi-last.navi-void {
+	background-image: url('http://www.herogirlcomics.com/wp-content/themes/herogirltheme v2/images/nav/default/last_void.png');
 }
 
 .navi-void, .navi-void:hover {
@@ -126,4 +132,13 @@ Style: Default
 	float: left;
 	text-indent: -9999px;
 	overflow: hidden;
+}
+
+/* Non-desktop */
+/* Disabled fixed nav scrolling on non-desktop sized windows */
+@media all and (max-width: 970px) {
+	#comic_navi_wrapper.floatingNavi {
+	  position: absolute;
+	  visibility: hidden;
+	}
 }

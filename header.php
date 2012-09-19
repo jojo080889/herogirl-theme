@@ -49,6 +49,11 @@
   })();
 
 </script>
+
+<!-- jquery/prototype conflic resolution -->
+<script ="text/javascript">
+jQuery.noConflict();
+</script>
 </head>
 
 <body <?php if (function_exists('body_class')) { body_class(); } ?>>

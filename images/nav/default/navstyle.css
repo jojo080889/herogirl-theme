@@ -1,0 +1,129 @@
+/* COMIC NAVIGATION 
+Author: Tyler Martin
+Style: Default
+*/
+
+#comic_navi_wrapper {
+	display: table;
+	border-collapse: collapse;
+	text-align: center;
+	margin: 0 auto;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+.comic_navi_left {
+	float: left;
+}
+
+.comic_navi_right {
+	float: right;
+}
+
+.comic_navi {
+	padding: 2px;
+}
+
+.navi-comictitle {
+	padding: 0px 6px;
+	text-align: center;
+	display: inline-block;
+}
+
+.navi {
+	padding: 0 6px;
+	display: inline-block;
+	height: 35px;
+	width: 32px;
+	background-repeat: no-repeat;
+	text-indent:-9999px; 
+}
+
+.navi a {
+	display: block;
+	text-decoration: none;
+}
+
+.navi-first {
+	float: left;
+	background-image: url('http://www.herogirlcomics.com/wp-content/themes/herogirltheme v2/images/nav/default/first.png');
+}
+
+.navi-prevchap, .navi-story_prev {
+	float: left;
+}
+
+.navi-story_prev_in {
+	float: left;
+}
+
+.navi-prev, .navi-previous {
+	background-image: url('http://www.herogirlcomics.com/wp-content/themes/herogirltheme v2/images/nav/default/prev.png');
+}
+
+.navi-comments, .navi-archive, .navi-random, .navi-buyprint {
+	display: inline-block;
+}
+
+.navi-random {
+	background-image: url('http://www.herogirlcomics.com/wp-content/themes/herogirltheme v2/images/nav/default/random.png');
+}
+
+.navi-buyprint {
+	height: 25px;
+	width: 80px;
+	line-height: 15px;
+	margin: 0;
+	padding: 0;
+}
+
+	.navi-buyprint:hover, button .navi-buyprint:hover {
+		display: inline-block;
+	}
+
+	.navi-buyprint-form {
+		display: inline-block;
+		width: 80px;
+	}
+
+.navi-comments-count {
+	padding-right: 4px;
+}
+	
+.navi-next {
+	float: left;
+	background-image: url('http://www.herogirlcomics.com/wp-content/themes/herogirltheme v2/images/nav/default/next.png');
+}
+
+.navi-nextchap, .navi-story_next {
+}
+
+.navi-story_next_in {
+}
+
+.navi-last {
+	float: right;
+	background-image: url('http://www.herogirlcomics.com/wp-content/themes/herogirltheme v2/images/nav/default/last.png');
+}
+
+.navi-void, .navi-void:hover {
+	font-weight: normal;
+}
+
+#navi-share-box {
+	height: 96px;
+	width: 120px;
+	padding: 1px;
+	position: relative;
+	background: url('sharebox.png') 0 0 no-repeat;
+	display: none;
+}
+
+#navi-share-box a {
+	width: 24px;
+	height: 24px;
+	display: block;
+	float: left;
+	text-indent: -9999px;
+	overflow: hidden;
+}

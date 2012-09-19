@@ -1,0 +1,156 @@
+/* COMIC NAVIGATION 
+Author: Tyler Martin
+Style: Silver
+*/
+
+#comic_navi_wrapper {
+	display: table;
+	border-collapse: collapse;
+	text-align: center;
+	margin: 5px auto;
+}
+
+.navi-comictitle {
+	text-align: center;
+	padding-top: 26px;
+	max-width: 100px;
+}
+
+.navi {
+	width: 66px;
+	padding: 66px 0 0 0;
+	display: inline-block;
+	overflow: hidden;
+	font-size: 11px;
+	text-align: center;
+	color: #555;
+	float: left;
+}
+
+.navi:hover, #navi-share:hover {
+	background-position: -66px 0;
+}
+
+.navi-first {
+	background: url('first.png') no-repeat;
+}
+
+.navi-prevchap, .navi-story_prev {
+	background: url('prevchap.png') no-repeat;
+}
+
+.navi-story_prev_in {
+	background: url('prevchap.png') no-repeat;
+}
+
+.navi-prev, .navi-previous {
+	margin-right: 10px;
+	background: url('prev.png') no-repeat;
+}
+
+.navi-prev-in, .navi-previous-in {
+	background: url('prev-in.png') no-repeat;
+}
+
+.navi-comments, .navi-archive, .navi-random, .navi-buyprint, .navi-subscribe, #navi-share {
+	margin: 0 5px;
+}
+
+.navi-buyprint {
+	border: none;
+	cursor: pointer;
+	background: url('buyprint.png') no-repeat;
+}
+
+.navi-buyprint:hover, button .navi-buyprint:hover {
+	background: url('buyprint.png') no-repeat;
+	background-position: -66px 0;
+	color: #f00;
+}
+
+.navi-buyprint-form {
+	width: 76px;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+
+.navi-archive, .navi-archives {
+	background: url('archive.png') no-repeat;
+}
+
+.navi-random {
+	background: url('random.png') no-repeat;
+}
+
+#navi-share {
+	background: url('archive.png') no-repeat;
+}
+
+.navi-subscribe {
+	background: url('subscribe.png') no-repeat;
+}
+
+.navi-comments {
+	padding: 0;
+	background: url('comments.png') no-repeat;
+}
+
+a.navi-comments span {
+	display: inline-block;
+	width: 66px;
+	height: 66px;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 66px;
+	color: #c5c5c5;
+}
+
+a.navi-comments span:hover {
+	color: #860b04;
+}
+
+.navi-next {
+	margin-left: 10px;
+	background: url('next.png') no-repeat;
+}
+
+.navi-next-in {
+	background: url('next-in.png') no-repeat;
+}
+
+.navi-nextchap, .navi-story_next {
+	background: url('nextchap.png') no-repeat;
+}
+
+.navi-story_next_in {
+	background: url('nextchap.png') no-repeat;
+}
+
+.navi-last {
+	background: url('last.png') no-repeat;
+}
+
+.navi-void, .navi-void:hover {
+	color: #999;
+	background-position: -132px 0;
+}
+
+#navi-share-box {
+	height: 96px;
+	width: 120px;
+	padding: 1px;
+	position: relative;
+	background: url('sharebox.png') no-repeat;
+	display: none;
+}
+
+#navi-share-box a {
+	width: 24px;
+	height: 24px;
+	display: block;
+	float: left;
+	text-indent: -9999px;
+	overflow: hidden;
+}
+

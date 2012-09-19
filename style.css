@@ -1,0 +1,1595 @@
+/*
+Theme Name: Herogirl
+Theme URI: http://www.herogirlcomics.com
+Description: The theme for Herogirl Comics.
+Author: Joy O Kim
+Tags: Two-Columns, Three-Columns, left-sidebar, right-sidebar, fixed-width, custom-header, theme-options, threaded-comments, sticky-post, translation-ready
+Version: 2
+.
+The CSS, XHTML and design is released under GPL v3:
+http://www.opensource.org/licenses/gpl-3.0.html
+.
+*/
+
+/* STANDARD TAGS */
+
+html { overflow-y: scroll; } 
+
+body {
+	margin: 0;
+	font-family: 'Palatino Linotype', 'Times New Roman', serif;
+	font-size: 14px;
+	color: #000;
+	background-color: #3a1c00;
+	background-image:url('images/herogirl-bg.png');
+	background-repeat: repeat-x;
+}
+
+a {
+	color: #cd3a3a;
+	text-decoration: none;
+}
+
+	a:hover {
+		color: #5E0116;
+	}
+
+	a:focus {
+		outline: none;
+	}
+
+	a img {
+		border: none;
+	}
+
+p {
+	margin: 12px 0;
+}
+
+img {
+	max-width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+small {
+	font-size: 12px;
+}
+
+hr {
+	height: 1px;
+	color: #000;
+	background-color: #000;
+	border: 0px;
+}
+
+blockquote {
+	margin: 10px;
+	padding: 5px 10px 5px 20px;
+	font-family: 'Georgia', serif;
+	font-size: 16px;
+	border-width: 1px 1px 1px 5px;
+	border-style: solid;
+	border-color: #000;
+}
+
+blockquote cite {
+	margin: 5px 0 0;
+	display: block;
+	font-weight: bold;
+	font-family: 'Arial', sans-serif;
+	font-size: 12px;
+}
+
+acronym, abbr, span.caps {
+	cursor: help;
+}
+
+acronym, abbr {
+	border-bottom: 1px dashed #000;
+}
+
+form {
+	margin: 0;
+}
+
+input, textarea {
+	font-family: 'Palatino Linotype', 'Times New Roman', serif;
+	font-size: 13px;
+}
+
+/* HEADINGS */
+
+h1, h1 a {
+	padding: 10px 0 0 0;
+	margin: 0;
+	font-size: 56px;
+	line-height: 46px;
+	letter-spacing: -5px;
+}
+
+h2, h2 a {
+	padding: 0 0 2px 0;
+	margin: 0;
+	font-size: 24px;
+	line-height: 24px;
+	letter-spacing: -1px;	
+}
+
+	h2.pagetitle, h2.pagetitle a, h2.page-title, h2.page-title a {
+		padding: 0 0 5px 0;
+		margin-top: 10px;
+		font-size: 28px;
+		letter-spacing: -2px;
+		clear: both;
+	}
+
+h3, h3 a {
+	padding: 0;
+	margin: 0;
+	font-size: 20px;
+	clear: both;
+	letter-spacing: -1px;
+}
+
+h4, h4 a {
+	padding: 0;
+	margin: 0;
+	font-size: 15px;
+	clear: both;
+}
+
+/* THE PAGE WRAPPER */
+
+#page {
+	width: 960px;
+	margin: 0px auto;
+	position: relative;
+}
+
+#page-wide {
+	width: 980px;
+	margin: 0px auto;
+}
+
+/* THE HEADER */
+
+#header {
+	text-align: center;
+	padding-top: 10px;
+}
+
+	#header .description {
+		padding: 0 0 10px 0;
+		font-size: 18px;
+		position: absolute;
+		top: 104px;
+		left: 201px;
+		color: #761600;
+		font-weight: bold;
+	}
+
+/* THE MENU */
+
+#menubar {
+	/*background: #000;*/
+	text-align: left;
+	list-style: none;
+	margin:0;
+	padding:0;
+	position:absolute;
+	text-align:left;
+	top:237px;
+	left: 54px;
+	width: 845px;
+}
+
+.ie #menubar {
+	zoom: 1; /* IE fix, allows for variable height menu  */
+	}
+	
+#menubar a {
+	font-size: 20px;
+}
+
+#menunav {
+	/*float: right;
+	text-align: center;*/
+	position: absolute;
+	top: -3px;
+	right: 0;
+}
+
+#menunav a {
+	color: #fff;
+}
+
+.menunav-search {
+	float: left;
+	padding-top: 1px;
+	height: 24px;
+}
+	
+.menunav-rss {
+	height: 25px;
+	padding: 3px 7px 8px 7px;
+	margin: 0 0 0 4px;
+	display: block;
+	float: left;
+	overflow: hidden;
+	font-size: 11px;
+}
+	.menunav-rss:before {
+		content: url('http://www.herogirlcomics.com/wp-content/themes/herogirltheme%20v2/images/feed-icon-20x20.png');
+		vertical-align: middle;
+		padding-right: 5px;
+	}
+	.menunav-rss:hover {
+		background: #b81818;
+		color: #ff9933;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		border-radius: 5px;
+	}
+
+.menunav-prev, .menunav-next {
+	display: none;
+	float: left;
+}
+
+.menunav-prev {
+	margin: 0 0 0 5px;
+}
+
+	.menunav-prev a, .menunav-next a {
+		width: 25px;
+		height: 25px;
+		line-height: 20px;
+		font-size: 28px;
+		font-weight: bold;
+		display: block;
+		overflow: hidden;
+	}
+
+	.menunav-prev a:hover {
+		background: #b81818;
+		color: #ff9933;
+	}
+
+.menunav-next a {
+}
+
+	.menunav-next a:hover {
+		background: #b81818;
+		color: #ff9933;
+	}
+
+#menu {
+	text-transform: capitalize;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	/*float: left;
+	line-height: 25px;*/
+	font-size: 12px;
+}
+
+	#menu a {
+		padding: 0px 10px 0 10px;
+		display: block;
+		color: #fff;
+		text-decoration: none;
+	}
+
+	#menu li .rss {
+		padding: 5px 0 5px 0;
+	}
+
+	#menu li {
+		float: left;
+		cursor:pointer;
+		margin-right: 10px;
+	}
+
+	#menu li:hover a, #menu li.sfhover a {
+		color: #fff; /* Main menu highlighted text color */
+	}
+
+	#menu li:hover, #menu li.sfhover {
+		background: #b81818;
+		color: #ff9933;/* Main menu highlighted background color */
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		border-radius: 5px;
+	}
+
+	.sfhover {
+		padding: 0;
+		margin: 0;
+	}
+	
+	/* For submenu dropdowns - this order must be maintained */
+
+	#menu ul {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		position: absolute;
+		left: -9999px;
+		width: 195px;
+		line-height: 1;
+	}
+	#menu li li {
+		width: 185px;
+		padding: 4px 5px;
+		color: #fff;
+	}
+	#menu li li a {
+		width: 194px;
+		padding: 0;
+		color: #fff;
+		border: none;
+	}
+	#menu li ul ul {
+		margin: -16px 0 0 190px;
+	}
+	#menu li ul li:hover a, #menu li ul li li:hover a, #menu li ul li li li:hover a, #menu li ul li li li:hover a {
+		color: #fff; /*Submenu highlighted text color */
+	}
+	#menu li:hover li a, #menu li li:hover li a, #menu li li li:hover li a, #menu li li li li:hover li a {
+		color: #fff; /*Submenu text color */
+		border: none;
+		background: none;
+	}
+	#menu li li:hover {
+		background: #f00; /*Submenu highlighted background color */
+	}
+	#menu li:hover ul ul, #menu li:hover ul ul ul, #menu li:hover ul ul ul ul, #menu li.sfhover ul ul, #menu li.sfhover ul ul ul, #menu li.sfhover ul ul ul ul {
+		left: -9999px;
+	}
+	#menu li:hover ul, #menu li li:hover ul, #menu li li li:hover ul, #menu li li li li:hover ul, #menu li.sfhover ul, #menu li li.sfhover ul, #menu li li li.sfhover ul, #menu li li li li.sfhover ul {
+		left: auto;
+		background: #000; /* Submenu background color */
+		text-transform: none;
+	}
+
+	#menu .current_page_item a {
+		color: #ff9933;
+		background: #b81818;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		border-radius: 5px;
+	}
+
+/* THE COMIC */
+
+#comic-head {
+	padding-top: 5px;
+	clear: both;
+}
+
+#comic {
+	text-align: center;
+}
+
+#comic-foot {
+	padding-bottom: 5px;
+	text-align: center;
+}
+
+/* THE FOOTER */
+
+#footer {
+	margin: 0;
+	text-align: center;
+	background-color: #000;
+	color: #fff;
+	width: 847px;
+	position: absolute;
+	margin-left: 57px;
+}
+	
+	#footer .footer-pipe {
+		padding: 0 2px;
+	}
+
+/* NAVIGATION */
+
+.nav,.blognav {
+	float: right;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 5px 0;
+	display: none;
+}
+
+	.nav-first{
+		float: left;
+	}
+
+	.nav-previous {
+		float: left;
+	}
+
+		.nav-previous a {
+			padding-left: 10px;
+		}
+		
+	.nav-next {
+		float: left;
+	}
+
+		.nav-next a {
+			padding-left: 10px;
+		}
+	
+	.nav-last {
+		float: left;
+	}
+	
+		.nav-last a {
+			padding-left: 10px;
+		}
+
+.pagenav, .commentnav {
+	height: 25px;
+	color: #000;
+	font-weight: bold;
+	line-height: 25px;
+	padding: 0 5px 0 5px;
+	margin-top: 5px;
+	clear: both;
+}
+
+	.pagenav-left, .commentnav-left {
+		float: left;
+	}
+
+	.pagenav-right, .commentnav-right {
+		float: right;
+	}
+
+	.nav a, .pagenav a, .nav-blog a {
+		display: block;
+		float: left;
+	}
+
+/* POSTS - PAGES */
+
+#pagewrap-right {
+	width: 770px;
+	padding: 0;
+	margin: 0;
+	float: left;
+	overflow: hidden;	
+}
+
+#pagewrap-left {
+	width: 560px;
+	float: left;
+	overflow: hidden;
+}
+
+
+#subcontent-wrapper {
+	clear: both;
+}
+
+#content-wrapper {
+	background-color: #fff;
+	position:relative;
+	width: 847px;
+	margin: 0 auto;
+	top: -2px; /* hack to fix this in FF */
+}
+
+#content {
+	float: left;
+}
+
+	.narrowcolumn {
+		width: 610px;
+		padding: 0 10px;
+		overflow: hidden;
+	}
+	
+	/* add 10px to smaller width layouts */
+		.layout-standard .narrowcolumn, .layout-v .narrowcolumn {
+			width: 610px;
+		}
+		
+	.widecolumn {
+		width: 980px;
+		overflow: hidden;
+	}
+	
+	.column_one {
+		width: 48%; 
+		float: left; 
+		padding: 1%; 
+	}
+	
+	.column_two {
+		width: 48%; 
+		float: left; 
+		padding: 1%; 
+	}
+
+.post {}
+
+.post-content {
+	padding: 3px;
+	margin-bottom: 20px;
+}
+
+.home .post-blog .post-foot, 
+.page-template-blog-php .post-foot {
+	margin-bottom: 40px;
+}
+
+.post-image {
+}
+
+.post-info {
+	padding-bottom: 5px;
+	font-size: 12px;
+}
+
+.post-text {
+	overflow: hidden;
+	display: block;
+}
+
+.post-author-gravatar {
+	float: right;
+}
+
+.post-mood {
+	float: left;
+	margin-right: 2px;
+}
+
+.post-calendar-date {
+	color: #777;
+	font-family: 'Georgia' , serif;
+	font-size: 15px;
+	font-weight: bold;
+	float: left;
+	margin-right: 3px;
+}
+
+.post-calendar-date .calendar-date {
+	height: 50px;
+	width: 45px;
+	background: url(images/calendar.png) center no-repeat;
+	font-family: 'Georgia', serif;
+	font-size: 22px;
+	font-style: normal;
+	color: #000;
+	text-align: center;
+	line-height: 100%;
+	padding: 0 2px 0 0;
+}
+
+
+.post-calendar-date .calendar-date span {
+	height: 16px;
+	padding: 1px 0 4px 0;
+	display: block;
+	font-family: 'Verdana', sans-serif;
+	font-size: 11px;
+	font-style: normal;
+	font-weight: normal;
+	color: #fff;
+	text-align: center;
+}
+
+.postdate {
+	font-size: 11px;
+}
+
+.entry {
+	line-height: 18px;
+	padding: 3px 0;
+}
+
+.more-link {
+	border-top: 1px dashed #000;
+	font-style: italic;
+	display: block;
+	clear: both;
+}
+
+.post-tags {
+	font-size: 12px;
+}
+
+.post .members-only {
+	border: 1px dotted #000;
+	background: #fafafa;
+	padding: 3px;
+}
+
+.post .non-member {
+	border: 1px dotted #000;
+	background: #fafafa;
+	padding: 3px;
+}
+
+.linkpages {
+	float: right;
+	margin: 5px;
+}
+
+/* COMMENT LINK */
+
+.comment-link {
+	font-weight: bold;
+	text-align: right;
+}
+
+/* THE BLOG HEADER */
+
+#blogheader {
+	padding: 5px 0 5px 0;
+	border-top: 1px solid #000;
+	margin: 10px 0 20px 0;
+}
+
+/* COMMENTS */
+
+.comment {
+	display: block;
+	margin-top: 20px;
+}
+
+	.comment .comment {
+		margin: 10px 0 0 70px;
+	}
+
+	.comment .comment .comment {
+		margin-left: 20px;
+	}
+
+.comment-avatar {
+	width: 64px;
+	height: 64px;
+	float: left;
+	overflow: hidden;
+}
+
+	.comment .comment .comment-avatar {
+		width: 40px;
+		height: 40px;
+	}
+
+		.comment .comment .avatar {
+			width: 40px;
+			height: 40px;
+		}
+
+.comment-content {
+	margin-left: 70px;
+}
+
+	.comment .comment .comment-content {
+		margin-left: 45px;
+	}
+
+		
+.comment-author cite {
+	font-weight: bold;
+	font-style: normal;
+	font-size: 16px;
+}
+
+	.comment .comment .comment-author cite {
+		font-size: 14px;
+	}
+
+.comment-meta-data {
+	font-size: 11px;
+}
+
+	.comment .comment .comment-permalink {
+		display: none;
+	}
+
+.comment-moderated {
+	font-style: italic;
+	font-size: 15px;
+}
+
+.comment-text  {
+	padding: 5px;
+	font-size: 12px;
+}
+
+	.comment-text p {
+		padding: 5px 5px;
+		margin: 0;
+	}
+
+.comment-note {
+	width: 400px;
+	display: block;
+	font-size: 11px;
+}
+		
+.comment-meta {
+	display: inline;
+	border-left: 1px solid #000;
+}
+
+.commentsrsslink {
+	font-size: 11px;
+	float: right;
+}
+
+#comment-textarea {
+	width: 99%;
+}
+
+#author, #email, #url {
+	width: 50%;
+}
+
+.comment-submit {
+	float: right;
+}
+
+.commentlist ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+ol.commentlist {
+	margin: 0;
+	padding: 10px 0 30px 0;
+	list-style: none;
+}
+
+ol.commentlist p {
+	margin-top: 3px;
+}
+
+ul.children {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#respond {
+	padding: 20px 0 0 0;
+}
+
+/* Pingbacks and Trackbacks */
+
+#pingtrackback {
+	font-size: 16px;
+}
+
+.pingback .comment-content, .trackback .comment-content {
+	margin-left: 0;
+}
+
+.trackback .comment-author cite, .pingback .comment-author cite {
+	font-weight: bold;
+	font-style: normal;
+	font-size: 13px;
+}
+
+
+/* ARCHIVE */
+/* For the built-in WordPress archive pages (by month or category) as well as search result pages */
+
+.comicthumbwrap {
+	float: left;
+	padding: 2px 2px 6px 2px;
+}
+
+.comicarchiveframe 
+{
+	margin: 0 auto;
+	text-align: center;
+	-moz-opacity: 0.99;       /* mozilla, netscape */
+	opacity:0.99; /* firefox, opera, safari, chrome */
+	-khtml-opacity: 0.99;      /* khtml, old safari */
+}
+
+	.comicarchiveframe:hover {
+		-moz-opacity: 0.7;       /* mozilla, netscape */
+		opacity:0.70; /* firefox, opera, safari, chrome */
+		-khtml-opacity: 0.7;      /* khtml, old safari */
+
+		}
+		
+	.imagenav-link img {
+		-moz-opacity: 0.5;       /* mozilla, netscape, gecko */
+		opacity:0.5; /* firefox, opera, safari, chrome */
+		-khtml-opacity: 0.5;      /* khtml, old safari */
+		}
+
+			.imagenav-link img:hover {
+				-moz-opacity: 0;       /* mozilla, netscape */
+				opacity:0.5; /* firefox, opera, safari, chrome */
+				-khtml-opacity: 0.5;      /* khtml, old safari */
+				}
+				
+.comicarchiveframe h3 {
+	margin: 0;
+}
+
+.comicarchiveframe a small {
+	display: block;
+	color: #000;
+}
+
+.archive-year {
+	font-size: 48px;
+}
+
+.archive-yearlist {
+	padding: 0 0 10px 0;
+	font-size: 14px;
+}
+
+/* SIDEBAR */
+
+/* Left Sidebar Themes */
+#sidebar-left {
+	float: left;
+	width: 200px;
+	padding: 5px;
+}
+
+/* Right Sidebar Themes */
+#sidebar-right {
+	float: right;
+	width: 200px;
+	padding: 5px;
+}
+
+#sidebar-overcomic {
+	padding: 20px 0 0 0;
+}
+
+.customsidebar ul, .customsidebar li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+/* Sidebar Class */
+
+.sidebar {
+	font-size: 12px;
+	overflow: hidden;
+}
+
+	.sidebar h2, .sidebar h2 a {
+		display: block;
+		font-size: 18px;
+		margin: 0;
+		padding: 0;
+	}
+	
+	.sidebar ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+		.sidebar ul li {
+			margin: 0 0 0 10px;
+			padding: 0;
+		}
+
+	.sidebar .widget {
+		margin-bottom: 10px;
+	}
+	
+	.sidebar .widget .post-extras, .sidebar .widget .entry {
+		padding: 3px;
+	}
+	
+/* WIDGETS */
+
+.random-comic-icon, .random-post-icon {
+	padding: 0 5px;
+	color: #fff;
+	background: #000;
+}
+
+.sidebar #comic-bookmark-holder {
+	width: 152px;
+	margin: 0 auto;
+	margin-bottom: 10px;
+}
+
+.sidebar .ComicPressLatestThumbnailWidget h2 {
+	text-align: left;
+}
+	
+.sidebar .ComicPressLatestThumbnailWidget {
+	text-align: center;
+}
+
+.sidebar .ComicPressSocialWidget {
+	display: inline;
+	width: 30px;
+}
+
+.sidebar .ComicPressSocialWidget div {
+	display: inline;
+}
+
+.sidebar .comic-bookmark {
+	width: 185px;
+	margin: 0 auto;
+}
+
+/* CALENDAR */
+
+#wp-calendar-wrap {
+	margin: 0 auto;
+	width: 170px;
+	background: #fff;
+	padding: 10px;
+	border: 1px solid #000;
+}
+
+#wp-calendar {
+	width: 165px;
+	margin: 0 auto;
+}
+
+	.wp-calendar-thumb {
+		width: 178px;
+		height: 130px;
+		margin: 0 auto;
+	}
+
+	#wp-calendar th {
+		font-size: 11px;
+		font-weight: normal;
+		text-align: center;
+	}
+
+	#wp-calendar caption {
+		font-family: 'Georgia' , sans-serif;
+		font-size: 18px;
+		letter-spacing: -1px;
+		font-variant: small-caps;
+	}
+
+	#wp-calendar td {
+		min-width: 20px;
+		padding: 0;
+		text-align: center;
+		border: 1px solid #000;
+	}
+
+	#wp-calendar a {
+		display: block;
+		text-decoration: none;
+		font-weight: bold;
+	}
+
+	#wp-calendar a:hover {
+		color: #fff;
+		background: #000;
+	}
+
+	table#wp-calendar {
+		border:none;
+		background: transparent;
+	}
+
+	table#wp-calendar td {
+		border-color: #999;
+	}
+
+	.wp-calendar-download {
+		width: 166px;
+		margin: 0 auto;
+		overflow: hidden;
+		font-size: 10px;
+		text-align: right;
+		color: #777;
+		background: #222;
+	}
+
+		.wp-calendar-download-links a {
+			padding: 0 3px;
+			font-weight: bold;
+			color: #fff;
+			background: #000;
+			border-left: 1px solid #777;
+		}
+
+			.wp-calendar-download-links a:hover {
+				background: #800;
+			}
+
+/* SEARCH */
+
+#searchform div {
+	position: relative;
+}
+
+#search_label {
+	position: absolute;
+	top: 9px;
+	left: 8px;
+	font-size: 12px;
+	opacity: 0.5;
+}
+
+#s-search, #s-transcript {
+	height: 15px;
+	width: 140px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	padding: 5px;
+	border: 1px solid #aaa;
+}
+	
+#searchform button {
+	padding: 5px;
+}
+	
+.searchresults {
+	padding: 0 0 30px 10px;
+	font-style: italic;
+}
+
+/* GALLERY */
+
+.gallery-image {
+	width: 518px;
+	overflow: hidden;
+	text-align: center;
+}
+
+.gallery-caption {
+	padding: 2px 0 0 0;
+	font-size: 11px;
+	line-height: 11px;
+}
+
+	.gallery-caption p {
+		width: 510px;
+		padding: 5px;
+		margin: 0;
+		text-align: center;
+	}
+
+.imagenav-wrap {
+	margin: 5px 0 0 0;
+}
+
+.imagenav {
+	width: 77px;
+	height: 77px;
+	float: left;
+	overflow: hidden;
+}
+
+.imagenav-center {
+	width: 344px;
+	height: 65px;
+	margin: 0 5px;
+	padding: 10px 5px 0 5px;
+	float: left;
+	color: #000;
+	text-align: center;
+	overflow: hidden;
+}
+
+.imagetitle {
+	color: #000;
+	font-size: 18px;
+}
+
+.imagenav-bg {
+	width: 77px;
+	height: 77px;
+	position: absolute;
+	z-index: 0;
+	overflow: hidden;
+}
+
+.imagenav-bg img {
+	width: 75px;
+	height: 75px;
+	padding: 1px;
+}
+
+.imagenav-arrow {
+	width: 77px;
+	height: 67px;
+	padding-bottom: 10px;
+	position: absolute;
+	z-index: 1;
+	color: #fff;
+	font-size: 80px;
+	font-weight: bold;
+	line-height: 67px;
+	text-align: center;
+	float: left;
+}
+
+.imagenav-link {
+	width: 77px;
+	height: 77px;
+	position: absolute;
+	z-index: 2;
+	float: left;
+	overflow: hidden;
+}
+
+.imagenav-link img {
+	width: 75px;
+	height: 75px;
+	padding: 1px;
+}
+
+#gallery-1 .attachment-thumbnail {
+	border: none;
+}
+
+/* POSTED IMAGES  */
+
+.wp-caption p {
+	margin: 5px 0;
+	line-height: 11px;
+	font-size: 11px;
+}
+
+.aligncenter {
+	margin: 0 auto;
+	display: block;
+}
+
+.alignright {
+	margin: 10px 0 10px 10px;
+	display: inline;
+	float: right;
+}
+
+.alignleft {
+	margin: 10px 10px 10px 0;
+	display: inline;
+	float: left;
+}
+
+/* TRANSCRIPT */
+
+#transcript {
+	padding: 0 10px;
+	font-size: 11px;
+	border-left: 4px dotted #333;
+	border-right: 4px dotted #333;
+}
+
+	.transcript-border {
+		padding: 0 5px;
+		margin: 15px 0;
+		border: 1px solid #555;
+		background: #fff;
+		clear: both;
+	}
+
+	a.transcript-title {
+		padding: 0 0 5px 0;
+		margin: 0 0 5px 0;
+		display: block;
+		font-family: 'Georgia' , serif;
+		font-style: italic;
+		font-size: 12px;
+		font-style: normal;
+		font-weight: normal;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		line-height: 2em;
+		border-bottom: 1px dashed #777;
+	}
+
+#transcript-content {
+	font-family: 'Courier New' , monospace;
+	overflow: hidden;
+}
+
+
+/* STORYLINES */
+
+.storyline-cats {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+	.storyline-cats li {
+		display: inline;
+	}
+
+	li.storyline-root {
+		display: none;
+	}
+
+/* CLEAR FLOATS */
+
+.clear {
+	clear: both;
+}
+
+/* CLEAR MARGINS */
+/* Used with BR for clearing paragraph margins for Safari, Chrome - avoid background gaps */
+
+.clear-margins {
+	clear: both;
+	height: 0;
+	line-height: 0;
+	font-size: 0;
+}
+
+/** BUY THIS **/
+
+.buythis {
+	padding: 0 5px 0 5px;
+}
+
+.buythisbutton {
+	height: 27px;
+	width: 240px;
+	margin: 5px 0 5px 0;
+	background: url('images/buythis.png') no-repeat;
+}
+
+.print-thumbnail {
+	text-align: center;
+}
+
+.page-template-buystrip-php .post-content table {
+	margin: 0 auto;
+}
+
+/** Project Wonderful CSS Embedded areas **/
+
+.blogpwad {
+	text-align: center;
+	width: 100%;
+}
+
+.headerpwad {
+	float: right;
+	margin: 5px 5px 0 0;
+}
+
+.footerpwad {
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+
+/* Archive Calendar Template */
+
+.cpcal-image {
+	height: 120px;
+	width: 152px;
+}
+
+.cpcal-cals {
+	margin: 0 auto;
+	padding-left: 5px;
+}
+
+.cpcal-month {
+	width: 157px;
+	padding: 5px 0 5px 5px;
+	margin: 0 8px 8px 0;
+	float: left;
+	border: 1px solid #999;
+	background:#fff;
+}
+
+.cpcal-monthtitle {
+	width: 154px;
+	height: 16px;
+	padding: 0 0 5px 0;
+	text-align: center;
+	font-family: 'Georgia' , serif;
+	font-variant: small-caps;
+	font-size: 16px;
+	line-height: 16px;
+	letter-spacing: -1px;
+}
+
+.cpcal-dayletter {
+	width: 20px;
+	height: 15px;
+	margin: 0 2px 2px 0;
+	display: block;
+	float: left;
+	text-align: center;
+	font-size: 11px;
+	line-height: 13px;
+}
+
+.cpcal-day {
+	width: 18px;
+	height: 13px;
+	margin: 0 2px 2px 0;
+	display: block;
+	float: left;
+	text-align: center;
+	font-size: 11px;
+	line-height: 13px;
+	border: 1px solid #999;
+}
+
+.cpcal-day a {
+	width: 18px;
+	height: 13px;
+	line-height: 13px;
+	display: block;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.cpcal-day a:hover {
+	color: #fff;
+	background: #000;
+}
+
+/* Storyline Template */
+
+#storyline, #storyline ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+#storyline li {
+	padding: 0;
+	margin: 0;
+}
+
+#storyline li img {
+	display: none;
+}
+
+#storyline li li img {
+	display: block;
+	float: right;
+	padding: 0 0 0 10px;
+}
+
+#storyline ul ul {
+	margin: 0 0 0 20px;
+}
+
+#storyline li li .storyline-title {
+	font-size: 24px;
+	font-weight: bold;
+	display: block;
+	color: #000;
+}
+
+#storyline li li .storyline-title:hover {
+	color: #900;
+}
+
+#storyline li li li a.storyline-title {
+	font-size: 18px;
+}
+
+#storyline li li li li a.storyline-title {
+	font-size: 14px;
+}
+
+.storyline-description {
+	font-size: 12px;
+}
+
+.storyline-foot {
+	clear: both;
+	margin: 0 0 10px 0;
+	height: 10px;
+	/*border-bottom: 4px solid #000; */
+}
+
+#storyline li li .storyline-foot {
+	/*border-bottom: 2px solid #000;*/
+}
+#storyline li li li .storyline-foot {
+	/*border-bottom: 1px solid #000;*/
+}
+
+/* Archive Year Template */
+
+.archive-date {
+	padding: 0 5px 0 0;
+	font-size: 12px;
+	white-space: nowrap;
+}
+
+.archive-title {
+	padding: 2px 5px;
+	line-height: 11px;
+	border-left: 1px solid #000;
+}
+
+.month-table {
+	border-collapse: collapse;
+	margin: 0 0 20px 0;
+}
+
+#linkspage, #linkspage ul, #linkspage li, #archivepage, #archivepage url, #archivepage li {
+	list-style: none;
+}
+
+#linkspage h2 {
+	margin-top: 20px;
+}
+
+/* Pagination */
+
+#wp-paginav {
+	text-align: left;
+}
+
+#paginav {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	float: left;
+	line-height: 25px;
+}
+
+	#paginav .paginav-pages {
+		padding-right: 10px;
+	}
+
+	#paginav a {
+		padding: 0px 10px;
+		display: block;
+	}
+
+	#paginav ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	#paginav li {
+		float: left;
+	}
+
+	#paginav .paginav-next, #paginav .paginav-previous {
+		font-size: 20px;
+	}
+
+	#paginav .paginav-current, #paginav .current {
+		padding: 0px 10px;
+		font-weight: bold;
+	}
+
+/* Tool Tips (ComicPress Rascal) */
+.tt a {
+	position: relative;
+	z-index: 1000;
+	color: #3CA3FF;
+	font-weight: bold;
+	text-decoration: none;
+	margin-bottom: -110px;
+}
+
+	a.tt span {
+		display: none;
+	}
+
+	a.tt:hover span.tooltip {
+		position: absolute;
+		display: block;
+		width: 200px;
+		color: #000;
+		margin: 0 auto;
+		text-align: center;
+		height: 164px;
+		background: url('images/comicpress-rascal.png') no-repeat;
+		z-index: 1000;
+	}
+	a.tt:hover span.top {
+		display: block;
+		width: 200px;
+		height: 35px;
+		padding-top: 10px 10px 0 10px;
+		margin-top: 59px;
+		margin-left: 25px;
+		background: url('images/bubble.png') 0 0 no-repeat;
+		z-index: 1000;
+	}
+	a.tt:hover span.middle {
+		/* different middle bg for stretch */
+		display: block;
+		width: 180px;
+		margin-left: 25px;
+		padding: 0 10px;
+		background: url('images/bubble.png') -200px 0 repeat-y;
+		z-index: 1000;
+	}
+	a.tt:hover span.bottom {
+		display: block;
+		width: 200px;
+		height: 15px;
+		background-position: -100px;
+		color: #548912;
+		margin-left: 25px;
+		background: url('images/bubble.png') 0 -35px no-repeat;
+		z-index: 1000;
+	}
+	
+	.ie .tt a:hover {
+		z-index:1000; color: #aaaaff; 
+		background-color: Transparent;
+	}
+
+/* User Pages */
+
+#userpage {
+	width: 100%;
+	padding: 5px;
+}
+
+	.userpage-avatar {
+		float: left;
+		width: 64px;
+		height: 64px;
+	}
+
+	.userpage-info {
+		margin-left: 10px;
+		float: left;
+	}
+
+	.userpage-desc {
+		width: 400px;
+		padding: 5px;
+		margin-top: 30px;
+		border: 1px dotted #efefef;
+	}
+
+	.userpage-posts {
+		margin-top: 20px;
+	}
+
+	.userpage-posts ol {
+		margin: 10px 0 0 30px;
+		padding: 0;
+	}
+
+	.userpage-posts li {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+/* Non-IE browser additions */
+
+::-moz-selection {
+    background: #a1c0d9; /* Firefox */
+}
+
+textarea {
+      resize: none;
+}
+
+/* selection colors */
+::selection {
+    background: #ffb7b7; /* Safari */
+}
+

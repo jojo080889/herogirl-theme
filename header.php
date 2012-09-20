@@ -26,7 +26,6 @@
 	<link rel="alternate" type="application/atom+xml" title="<?php bloginfo('name') ?> Atom Feed" href="<?php bloginfo('atom_url') ?>" />
 	<link rel="pingback" href="<?php bloginfo('pingback_url') ?>" />
 	<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.ico" />
-	<meta name="description" content="<?php bloginfo('description'); ?>" />
 	<meta name="ComicPress" content="<?php global $comicpress_version; echo $comicpress_version; ?>" />
 	<?php if ( is_singular() && $comicpress_options['enable_comment_javascript'] ) wp_enqueue_script( 'comment-reply' ); ?>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js?ver=2.4.1"></script>
@@ -59,6 +58,15 @@ jQuery.noConflict();
 </head>
 
 <body <?php if (function_exists('body_class')) { body_class(); } ?>>
+<!-- FB like code -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 <!-- Project Wonderful Ad Box Loader -->
 <!-- Put this after the <body> tag at the top of your page -->

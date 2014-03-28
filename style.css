@@ -1047,24 +1047,25 @@ ul.children {
 
 #search_label {
 	position: absolute;
-	top: 9px;
+	top: 10px;
 	left: 8px;
-	font-size: 12px;
-	opacity: 0.5;
+	font-size: 13px;
+	color: #666;
 }
 
 #s-search, #s-transcript {
-	height: 15px;
-	width: 140px;
+	width: 100%;
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 	padding: 5px;
+	padding-left: 25px;
 	border: 1px solid #aaa;
+	box-sizing: border-box;
 }
 	
 #searchform button {
-	padding: 5px;
+	display: none;
 }
 	
 .searchresults {

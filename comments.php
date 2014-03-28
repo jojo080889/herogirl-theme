@@ -23,7 +23,7 @@ if (function_exists('in_members_category')) {
 
 	<?php if ( !empty($comments_by_type['comment']) ) : ?>
 		
-		<h3 id="comments"><?php comments_number(__('Discussion &not;','comicpress'), __('Discussion &not;','comicpress'), __('Discussion (%) &not;','comicpress') );?></h3>
+		<h3 id="comments"><?php comments_number(__('Discussion','comicpress'), __('Discussion','comicpress'), __('Discussion (%)','comicpress') );?></h3>
 		<div class="commentsrsslink">[ <?php post_comments_feed_link('Comments RSS'); ?> ]</div>
 		<ol class="commentlist">
 			<?php if (function_exists('comicpress_comments_callback')) { 
@@ -106,7 +106,7 @@ if (function_exists('in_members_category')) {
 
 	<div id="respond">
 
-		<h3><?php comment_form_title( __('Comment &not;','comicpress'), __('Reply to %s &not;','comicpress') ); ?></h3>
+		<h3><?php comment_form_title( __('Comment','comicpress'), __('Reply to %s','comicpress') ); ?></h3>
 
 		<div class="cancel-comment-reply">
 			<p><small><?php cancel_comment_reply_link(); ?></small></p>
@@ -128,7 +128,7 @@ if (function_exists('in_members_category')) {
 				<?php endif; ?>
 				<?php do_action('comment_form', $post->ID); ?>
 				<p><textarea name="comment" id="comment-textarea" cols="60" rows="6" tabindex="4"></textarea></p>
-				<p><button type="submit" class="comment-submit"><?php _e('Submit Comment','comicpress'); ?></button></p>
+				<p><button type="submit" class="comment-submit"><?php _e('Comment','comicpress'); ?></button></p>
 				<?php 
 				if (!$comicpress_options['disable_comment_note']) { ?>
 					<p><span class="comment-note"><?php _e('NOTE - You can use these tags:','comicpress'); ?><br /><?php echo allowed_tags(); ?></span></p>

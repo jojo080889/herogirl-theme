@@ -56,7 +56,7 @@ if (!function_exists('comicpress_display_post_calendar')) {
 if (!function_exists('comicpress_display_post_author')) {
 	function comicpress_display_post_author() {
 		global $post,$authordata;
-		$post_author = "<span class=\"post-date\">".get_the_time('F jS, Y')."</span> <span class=\"pipe\">|</span> <span class=\"post-author\">  ".__(' by ','comicpress')."<a href=\"".get_author_posts_url( $authordata->ID, $authordata->user_nicename )."\">".get_the_author()."</a></span>\r\n";
+		$post_author = "<span class=\"post-date\">".get_the_time('F jS, Y')."</span> <span class=\"post-author\">  ".__(' by ','comicpress')."<a href=\"".get_author_posts_url( $authordata->ID, $authordata->user_nicename )."\">".get_the_author()."</a></span>\r\n";
 		echo apply_filters('comicpress_display_post_author',$post_author);
 	}
 }
@@ -192,7 +192,6 @@ if (!function_exists('comicpress_display_post')) {
 		if (!is_page()) {
 			comicpress_display_post_author($is_comic);
 			if (!is_archive() && !is_search()) {edit_post_link(__('Edit','comicpress'), ' <span class="pipe">|</span> <span class="post-edit">', '</span>'); }
-			comicpress_display_post_category($is_comic);
 			if (function_exists('the_ratings')) { the_ratings(); } 
 		} ?>
 					</div>

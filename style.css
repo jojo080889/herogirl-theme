@@ -873,8 +873,9 @@ ul.children {
 /* Right Sidebar Themes */
 #sidebar-right {
 	float: right;
-	width: 200px;
-	padding: 5px;
+	width: 195px;
+	padding: 0 10px;
+	padding-top: 10px;
 }
 
 #sidebar-overcomic {

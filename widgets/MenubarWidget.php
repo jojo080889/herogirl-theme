@@ -25,16 +25,14 @@ class ComicPressMenubarWidget extends WP_Widget {
 				include(get_stylesheet_directory() . '/custom-menubar.php');
 			} else { ?>
 
+	<div class="menubar-container">
 		<div id="menubar">
 			<div id="menunav">
 				<?php if ($comicpress_options['enable_search_in_menubar']) { ?>
-<div class="menunav-search">
+				<div class="menunav-search">
 					<?php include(get_template_directory().'/searchform.php'); ?>
 				</div>
 				<?php } ?>
-<?php if ($comicpress_options['enable_rss_in_menubar']) { ?>
-<a href="<?php bloginfo('rss2_url') ?>" title="RSS Feed" class="menunav-rss">RSS</a>
-<?php } ?>
 				<?php if ($comicpress_options['enable_navigation_in_menubar']) { ?>
 					<?php if (is_home() && !$comicpress_options['disable_comic_frontpage']) {
 						Protect();
@@ -93,9 +91,16 @@ class ComicPressMenubarWidget extends WP_Widget {
 				<?php if ($comicpress_options['contact_in_menubar']) { ?>
 					<li class="page_item page-item-contact"><a href="mailto:<?php bloginfo('admin_email'); ?>">Contact</a></li>
 				<?php } ?>
+				<?php if ($comicpress_options['enable_rss_in_menubar']) { ?>
+					<a href="<?php bloginfo('rss2_url') ?>" title="RSS Feed" class="menunav-rss">
+						<img src="<?php bloginfo('template_directory'); ?>/images/rss.png" />
+						RSS
+					</a>
+				<?php } ?>
 				</ul>
 				<div class="clear"></div>
 			</div>
+		</div>
 		<?php } 
 		}
 	} 	

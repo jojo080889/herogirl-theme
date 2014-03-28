@@ -18,29 +18,26 @@ html { overflow-y: scroll; }
 body {
 	margin: 0;
 	font-family: 'Palatino Linotype', 'Times New Roman', serif;
-	font-size: 14px;
-	color: #000;
-	background-color: #3a1c00;
-	background-image:url('images/herogirl-bg.png');
-	background-repeat: repeat-x;
+	color: #444;
+	background-color: #F4EAD5;
 }
 
 a {
-	color: #cd3a3a;
+	color: #FA6900;
 	text-decoration: none;
 }
 
-	a:hover {
-		color: #5E0116;
-	}
+a:hover {
+	color: #F38630
+}
 
-	a:focus {
-		outline: none;
-	}
+a:focus {
+	outline: none;
+}
 
-	a img {
-		border: none;
-	}
+a img {
+	border: none;
+}
 
 p {
 	margin: 12px 0;
@@ -158,18 +155,37 @@ h4, h4 a {
 	text-align: center;
 	padding-top: 10px;
 }
+	
+	#header .blog-name {
+		font-family: 'Cherry Swash', serif;
+		font-size: 7em;
+		text-transform: lowercase;
+		color: #E94E77;
+	}
 
 	#header .description {
 		padding: 0 0 10px 0;
 		font-size: 18px;
 		position: absolute;
-		top: 104px;
-		left: 201px;
-		color: #761600;
-		font-weight: bold;
+		top: 49px;
+		left: 361px;
+		color: #D68189;
+	}
+
+	#header .icon img {
+		height: 9em;
+		margin-right: -5em;
+		margin-bottom: -1em;
 	}
 
 /* THE MENU */
+#menubar-container {
+	position: relative;
+	width: 1000px;
+	top: 0;
+	left: 50%;
+	margin-left: -500px;
+}
 
 #menubar {
 	/*background: #000;*/
@@ -177,11 +193,7 @@ h4, h4 a {
 	list-style: none;
 	margin:0;
 	padding:0;
-	position:absolute;
-	text-align:left;
-	top:237px;
-	left: 54px;
-	width: 845px;
+	width: 100%;
 }
 
 .ie #menubar {
@@ -192,18 +204,6 @@ h4, h4 a {
 	font-size: 20px;
 }
 
-#menunav {
-	/*float: right;
-	text-align: center;*/
-	position: absolute;
-	top: -3px;
-	right: 0;
-}
-
-#menunav a {
-	color: #fff;
-}
-
 .menunav-search {
 	float: left;
 	padding-top: 1px;
@@ -211,25 +211,11 @@ h4, h4 a {
 }
 	
 .menunav-rss {
-	height: 25px;
-	padding: 3px 7px 8px 7px;
-	margin: 0 0 0 4px;
-	display: block;
-	float: left;
-	overflow: hidden;
-	font-size: 11px;
+	float: right;
 }
-	.menunav-rss:before {
-		content: url('http://www.herogirlcomics.com/wp-content/themes/herogirltheme%20v2/images/feed-icon-20x20.png');
+	.menunav-rss img {
+		height: 25px;
 		vertical-align: middle;
-		padding-right: 5px;
-	}
-	.menunav-rss:hover {
-		background: #b81818;
-		color: #ff9933;
-		-moz-border-radius: 5px;
-		-webkit-border-radius: 5px;
-		border-radius: 5px;
 	}
 
 .menunav-prev, .menunav-next {
@@ -265,13 +251,12 @@ h4, h4 a {
 	}
 
 #menu {
-	text-transform: capitalize;
+	text-transform: lowercase;
 	padding: 0;
 	margin: 0;
 	list-style: none;
 	/*float: left;
 	line-height: 25px;*/
-	font-size: 12px;
 }
 
 	#menu a {
@@ -296,11 +281,7 @@ h4, h4 a {
 	}
 
 	#menu li:hover, #menu li.sfhover {
-		background: #b81818;
 		color: #ff9933;/* Main menu highlighted background color */
-		-moz-border-radius: 5px;
-		-webkit-border-radius: 5px;
-		border-radius: 5px;
 	}
 
 	.sfhover {
@@ -354,12 +335,55 @@ h4, h4 a {
 	}
 
 	#menu .current_page_item a {
-		color: #ff9933;
-		background: #b81818;
-		-moz-border-radius: 5px;
-		-webkit-border-radius: 5px;
-		border-radius: 5px;
+		color: #fff;
 	}
+
+/* THE RIBBON */
+#menubar {
+ font-size: 16px !important;
+ /* This ribbon is based on a 16px font side and a 24px vertical rhythm. I've used em's to position each element for scalability. If you want to use a different font size you may have to play with the position of the ribbon elements */
+ width: 86%;
+ position: relative;
+ background: #A7DBD8;
+ color: #fff;
+ text-align: center;
+ padding: 1em 2em; /* Adjust to suit */
+ margin: 0em auto 0em; /* Based on 24px vertical rhythm. 48px bottom margin - normally 24 but the ribbon 'graphics' take up 24px themselves so we double it. */
+}
+#menubar:before, #menubar:after {
+ content: "";
+ position: absolute;
+ display: block;
+ bottom: -1em;
+ border: 1.5em solid #69D2E7;
+ z-index: -1;
+}
+#menubar:before {
+ left: -2em;
+ border-right-width: 1.5em;
+ border-left-color: transparent;
+}
+#menubar:after {
+ right: -2em;
+ border-left-width: 1.5em;
+ border-right-color: transparent;
+}
+#menubar #menu:before, #menubar #menu:after {
+ content: "";
+ position: absolute;
+ display: block;
+ border-style: solid;
+ border-color: #51B3C7 transparent transparent transparent;
+ bottom: -1em;
+}
+#menubar #menu:before {
+ left: 0;
+ border-width: 1em 0 0 1em;
+}
+#menubar #menu:after {
+ right: 0;
+ border-width: 1em 1em 0 0;
+}
 
 /* THE COMIC */
 
@@ -380,14 +404,17 @@ h4, h4 a {
 /* THE FOOTER */
 
 #footer {
-	margin: 0;
 	text-align: center;
-	background-color: #000;
+	background-color: #333;
 	color: #fff;
 	width: 847px;
-	position: absolute;
-	margin-left: 57px;
+	margin: 0 auto;
+	padding: 10px 0;
+	text-transform: lowercase;
 }
+	#footer p {
+		margin: 0;
+	}
 	
 	#footer .footer-pipe {
 		padding: 0 2px;
@@ -480,7 +507,6 @@ h4, h4 a {
 	position:relative;
 	width: 847px;
 	margin: 0 auto;
-	top: -2px; /* hack to fix this in FF */
 }
 
 #content {
@@ -1579,17 +1605,6 @@ ul.children {
 	}
 
 /* Non-IE browser additions */
-
-::-moz-selection {
-    background: #a1c0d9; /* Firefox */
-}
-
 textarea {
       resize: none;
 }
-
-/* selection colors */
-::selection {
-    background: #ffb7b7; /* Safari */
-}
-

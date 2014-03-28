@@ -957,6 +957,13 @@ ul.children {
 	margin: 0 auto;
 }
 
+.sidebar .social-icons {
+	text-align: center;
+}
+	.sidebar .social-icons img {
+		width: 35px;
+	}
+
 /* CALENDAR */
 
 #wp-calendar-wrap {

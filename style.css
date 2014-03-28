@@ -168,7 +168,7 @@ h4, h4 a {
 		font-size: 18px;
 		position: absolute;
 		top: 49px;
-		left: 361px;
+		left: 385px;
 		color: #D68189;
 	}
 
@@ -344,7 +344,7 @@ h4, h4 a {
  /* This ribbon is based on a 16px font side and a 24px vertical rhythm. I've used em's to position each element for scalability. If you want to use a different font size you may have to play with the position of the ribbon elements */
  width: 86%;
  position: relative;
- background: #A7DBD8;
+ background: #69D2E7;
  color: #fff;
  text-align: center;
  padding: 1em 2em; /* Adjust to suit */
@@ -355,7 +355,7 @@ h4, h4 a {
  position: absolute;
  display: block;
  bottom: -1em;
- border: 1.5em solid #69D2E7;
+ border: 1.5em solid #A7DBD8;
  z-index: -1;
 }
 #menubar:before {

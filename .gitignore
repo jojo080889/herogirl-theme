@@ -163,6 +163,7 @@ pip-log.txt
 
 # Mac crap
 .DS_Store
+.Rhistory
 
 # Codekit
 config.codekit

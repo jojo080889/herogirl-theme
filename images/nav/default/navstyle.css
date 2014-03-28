@@ -12,7 +12,6 @@ Style: Default
 	left: 50%;
 	text-align: center;
 	font-weight: bold;
-	font-size: 12px;
 	padding: 10px;
 	-webkit-border-top-left-radius: 5px;
 	-webkit-border-bottom-left-radius: 5px;
@@ -35,11 +34,9 @@ Style: Default
 
 .navi {
 	display: block;
-	height: 35px;
-	width: 32px;
-	background-repeat: no-repeat;
-	text-indent:-9999px; 
 	margin: 0 auto;
+	font-size: 2em;
+	padding: 5px 0;
 }
 
 .navi a {
@@ -48,10 +45,10 @@ Style: Default
 }
 
 .navi-first {
-	background-image: url('http://www.herogirlcomics.com/wp-content/themes/herogirltheme v2/images/nav/default/first.png');
+	
 }
 .navi-first.navi-void {
-	background-image: url('http://www.herogirlcomics.com/wp-content/themes/herogirltheme v2/images/nav/default/first_void.png');
+	color: #ccc;
 }
 
 .navi-prevchap, .navi-story_prev {
@@ -63,10 +60,9 @@ Style: Default
 }
 
 .navi-prev, .navi-previous {
-	background-image: url('http://www.herogirlcomics.com/wp-content/themes/herogirltheme v2/images/nav/default/prev.png');
 }
 .navi-prev.navi-void, .navi-previous.navi-void {
-	background-image: url('http://www.herogirlcomics.com/wp-content/themes/herogirltheme v2/images/nav/default/prev_void.png');
+	color: #ccc;
 }
 
 .navi-comments, .navi-archive, .navi-random, .navi-buyprint {
@@ -74,7 +70,6 @@ Style: Default
 }
 
 .navi-random {
-	background-image: url('http://www.herogirlcomics.com/wp-content/themes/herogirltheme v2/images/nav/default/random.png');
 }
 
 .navi-buyprint {
@@ -99,17 +94,15 @@ Style: Default
 }
 	
 .navi-next {
-	background-image: url('http://www.herogirlcomics.com/wp-content/themes/herogirltheme v2/images/nav/default/next.png');
 }
 .navi-next.navi-void {
-	background-image: url('http://www.herogirlcomics.com/wp-content/themes/herogirltheme v2/images/nav/default/next_void.png');
+	color: #ccc;
 }
 
 .navi-last {
-	background-image: url('http://www.herogirlcomics.com/wp-content/themes/herogirltheme v2/images/nav/default/last.png');
 }
 .navi-last.navi-void {
-	background-image: url('http://www.herogirlcomics.com/wp-content/themes/herogirltheme v2/images/nav/default/last_void.png');
+	color: #ccc;
 }
 
 .navi-void, .navi-void:hover {

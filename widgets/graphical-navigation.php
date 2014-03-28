@@ -45,9 +45,9 @@ class widget_comicpress_graphical_navigation extends WP_Widget {
 	<div class="comic_navi_left">
 			<?php if ($instance['first']) {
 				if (!empty($first_comic) && ($first_comic != $this_permalink)) { ?>
-					<a href="<?php echo $first_comic; ?>" class="navi navi-first" title="<?php echo $instance['first_title']; ?>"><?php echo $instance['first_title']; ?><span>First</span></a>
+					<a href="<?php echo $first_comic; ?>" class="navi navi-first" title="<?php echo $instance['first_title']; ?>"><?php echo $instance['first_title']; ?><span><i class="fa fa-backward"></i></span></a>
 				<?php } else { ?>
-					<div class="navi navi-first navi-void"><?php echo $instance['first_title']; ?><span>First</span></div>
+					<div class="navi navi-first navi-void"><?php echo $instance['first_title']; ?><span><i class="fa fa-backward"></i></span></div>
 				<?php } 
 			}
 			
@@ -67,9 +67,9 @@ class widget_comicpress_graphical_navigation extends WP_Widget {
 			} 
 			if ($instance['previous']) {
 				if (!empty($prev_comic)) { ?>
-					<a href="<?php echo $prev_comic; ?>" class="navi navi-prev" title="<?php echo $instance['previous_title']; ?>"><?php echo $instance['previous_title']; ?><span>Previous</span></a>
+					<a href="<?php echo $prev_comic; ?>" class="navi navi-prev" title="<?php echo $instance['previous_title']; ?>"><?php echo $instance['previous_title']; ?><span><i class="fa fa-step-backward"></i></span></a>
 				<?php } else { ?>
-					<div class="navi navi-prev navi-void"><?php echo $instance['previous_title']; ?><span>Previous</span></div>
+					<div class="navi navi-prev navi-void"><?php echo $instance['previous_title']; ?><span><i class="fa fa-step-backward"></i></span></div>
 				<?php } 
 			} 
 ?>
@@ -80,7 +80,7 @@ class widget_comicpress_graphical_navigation extends WP_Widget {
 				<a href="<?php echo $instance['archive_path']; ?>" class="navi navi-archives navi-archive" title="<?php echo $instance['archives_title']; ?>"><?php echo $instance['archives_title']; ?></a>
 			<?php } 
 			if ($instance['random']) { ?>
-				<a href="<?php echo bloginfo('url'); ?>/?randomcomic" class="navi navi-random" title="<?php echo $instance['random_title']; ?>"><?php echo $instance['random_title']; ?><span>Random</span></a>
+				<a href="<?php echo bloginfo('url'); ?>/?randomcomic" class="navi navi-random" title="<?php echo $instance['random_title']; ?>"><?php echo $instance['random_title']; ?><span><i class="fa fa-random"></i></span></a>
 			<?php }
 			if ($instance['comictitle']) { ?>
 				<span class="navi-comictitle"><a href="<?php the_permalink(); ?>">"<?php the_title(); ?>"</a></span>
@@ -162,9 +162,9 @@ class widget_comicpress_graphical_navigation extends WP_Widget {
 			<?php
 			if ($instance['next']) {
 				if (!empty($next_comic)) { ?>
-					<a href="<?php echo $next_comic; ?>" class="navi navi-next" title="<?php echo $instance['next_title']; ?>"><?php echo $instance['next_title']; ?><span>Next</span></a>
+					<a href="<?php echo $next_comic; ?>" class="navi navi-next" title="<?php echo $instance['next_title']; ?>"><?php echo $instance['next_title']; ?><span><i class="fa fa-step-forward"></i></span></a>
 				<?php } else { ?>
-					<div class="navi navi-next navi-void"><?php echo $instance['next_title']; ?><span>Next</span></div>
+					<div class="navi navi-next navi-void"><?php echo $instance['next_title']; ?><span><i class="fa fa-step-forward"></i></span></div>
 				<?php }
 			}
 			if ($instance['next_in'] && (get_option('comicpress-enable-storyline-support') == 1) ) {
@@ -186,10 +186,10 @@ class widget_comicpress_graphical_navigation extends WP_Widget {
 					if ($instance['lastgohome']) { ?>
 						<a href="/" class="navi navi-last" title="<?php echo $instance['last_title']; ?>"><?php echo $instance['last_title']; ?><span>Last</span></a>
 					<?php } else { ?>
-						<a href="<?php echo $last_comic; ?>" class="navi navi-last" title="<?php echo $instance['last_title']; ?>"><?php echo $instance['last_title']; ?><span>Last</span></a>						
+						<a href="<?php echo $last_comic; ?>" class="navi navi-last" title="<?php echo $instance['last_title']; ?>"><?php echo $instance['last_title']; ?><span><i class="fa fa-forward"></i></span></a>						
 					<?php } ?>
 				<?php } else { ?>
-					<div class="navi navi-last navi-void"><?php echo $instance['last_title']; ?><span>Last</span></div>
+					<div class="navi navi-last navi-void"><?php echo $instance['last_title']; ?><span><i class="fa fa-forward"></i></span></div>
 				<?php }
 			} ?>
 	</div>

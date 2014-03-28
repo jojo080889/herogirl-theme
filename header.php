@@ -17,8 +17,8 @@
 	}
   ?></title>
 	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type') ?>; charset=<?php bloginfo('charset') ?>" />
-	<link href='http://fonts.googleapis.com/css?family=Lusitana:400,700|Salsa|Inika:400,700' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Berkshire+Swash|Cherry+Swash:400,700' rel='stylesheet' type='text/css'>
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" media="screen" />
 <?php if ($comicpress_options['enable_design_options']) { ?>
 	<link rel="stylesheet" type="text/css" media="screen" href="<?php echo get_template_directory_uri(); ?>/style.php" />
@@ -110,7 +110,7 @@ jQuery.noConflict();
 		<img src="<?php bloginfo('template_directory'); ?>/images/herogirl-logo.png" />
 	</span>
 	<a href="<?php bloginfo('url'); ?>" class="blog-name">
-		<?php bloginfo('name') ?>
+		Herogirl
 	</a>
 	<div class="description"><?php bloginfo('description') ?></div>
 	<?php get_sidebar('header'); ?>

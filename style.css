@@ -103,6 +103,7 @@ h1, h1 a {
 	font-size: 56px;
 	line-height: 46px;
 	letter-spacing: -5px;
+	font-family: "Fauna One", serif;
 }
 
 h2, h2 a {
@@ -111,6 +112,7 @@ h2, h2 a {
 	font-size: 24px;
 	line-height: 24px;
 	letter-spacing: -1px;	
+	font-family: "Fauna One", serif;
 }
 
 	h2.pagetitle, h2.pagetitle a, h2.page-title, h2.page-title a {
@@ -127,6 +129,7 @@ h3, h3 a {
 	font-size: 20px;
 	clear: both;
 	letter-spacing: -1px;
+	font-family: "Fauna One", serif;
 }
 
 h4, h4 a {
@@ -134,6 +137,7 @@ h4, h4 a {
 	margin: 0;
 	font-size: 15px;
 	clear: both;
+	font-family: "Fauna One", serif;
 }
 
 /* THE PAGE WRAPPER */
@@ -411,6 +415,7 @@ h4, h4 a {
 	margin: 0 auto;
 	padding: 10px 0;
 	text-transform: lowercase;
+	font-size: smaller;
 }
 	#footer p {
 		margin: 0;
@@ -615,7 +620,6 @@ h4, h4 a {
 }
 
 .entry {
-	line-height: 18px;
 	padding: 3px 0;
 }
 
@@ -728,7 +732,7 @@ h4, h4 a {
 
 .comment-text  {
 	padding: 5px;
-	font-size: 12px;
+	font-size: smaller;
 }
 
 	.comment-text p {
@@ -891,7 +895,7 @@ ul.children {
 /* Sidebar Class */
 
 .sidebar {
-	font-size: 12px;
+	font-size: smaller;
 	overflow: hidden;
 }
 
@@ -909,7 +913,6 @@ ul.children {
 	}
 
 		.sidebar ul li {
-			margin: 0 0 0 10px;
 			padding: 0;
 		}
 
@@ -1069,6 +1072,8 @@ ul.children {
 	padding: 5px;
 	padding-left: 25px;
 	border: 1px solid #aaa;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
 	
@@ -1412,6 +1417,7 @@ ul.children {
 	font-weight: bold;
 	display: block;
 	color: #000;
+	font-family: "Fauna One", serif;
 }
 
 #storyline li li .storyline-title:hover {
